@@ -3,7 +3,7 @@ use pointpillars as baseline, use SAIC dataset to do 3D detection
 
 mainly forked from: https://github.com/nutonomy/second.pytorch
 
-Pre_trained model dowload:
+Pre_trained model download:
 
 [car model](https://drive.google.com/file/d/1bDuc4clHaIBmme8iq4oR5uaSqvjS6sBo/view?usp=sharing)
 
