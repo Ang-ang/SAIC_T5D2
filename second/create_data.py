@@ -82,8 +82,8 @@ def create_kitti_info_file(data_path,
         image_ids=train_img_ids,
         relative_path=relative_path)
     _calculate_num_points_in_gt(data_path, kitti_infos_train, relative_path)
-    filename = save_path / 'kitti_infos_train.pkl'
-    print(f"kitti info train file is saved to {filename}")
+    filename = save_path / 'SAIC_dataset_infos_train.pkl'
+    print(f"SAIC_dataset info train file is saved to {filename}")
     with open(filename, 'wb') as f:
         pickle.dump(kitti_infos_train, f)
     kitti_infos_val = kitti.get_kitti_image_info(
@@ -94,8 +94,8 @@ def create_kitti_info_file(data_path,
         image_ids=val_img_ids,
         relative_path=relative_path)
     _calculate_num_points_in_gt(data_path, kitti_infos_val, relative_path)
-    filename = save_path / 'kitti_infos_val.pkl'
-    print(f"kitti info val file is saved to {filename}")
+    filename = save_path / 'SAIC_dataset_infos_val.pkl'
+    print(f"SAIC_dataset info val file is saved to {filename}")
     with open(filename, 'wb') as f:
         pickle.dump(kitti_infos_val, f)
     """
@@ -112,8 +112,8 @@ def create_kitti_info_file(data_path,
         with open(filename, 'wb') as f:
             pickle.dump(kitti_infos_trainval, f)
     """
-    filename = save_path / 'kitti_infos_trainval.pkl'
-    print(f"kitti info trainval file is saved to {filename}")
+    filename = save_path / 'SAIC_dataset_infos_trainval.pkl'
+    print(f"SAIC_dataset info trainval file is saved to {filename}")
     with open(filename, 'wb') as f:
         pickle.dump(kitti_infos_train + kitti_infos_val, f)
 
