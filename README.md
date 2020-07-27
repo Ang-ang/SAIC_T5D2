@@ -24,6 +24,8 @@ First, use Anaconda to configure as many packages as possible.
 ```bash
 conda create -n SAIC python=3.7 anaconda
 source activate SAIC
+conda install numpy=1.17.2 shapely pybind11 protobuf scikit-image numba pillow
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 ```
 #### 3. Setup cuda for numba
 
@@ -46,11 +48,11 @@ Download SAIC dataset and create some directories first:
 
 ```plain
 └── SAIC_DATASET_ROOT
-       ├── training    <-- 6000 train data
+       ├── training
        |   ├── calibration
        |   ├── label
        |   ├── velodyne
-       └── testing     <-- 1200 test data
+       └── testing
            ├── velodyne
 ```
 Note: this repo use ```SAIC_DATASET_ROOT=/data/SAIC_dataset/```.
