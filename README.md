@@ -3,6 +3,8 @@ use pointpillars as baseline, use SAIC dataset to do 3D detection
 
 mainly forked from https://github.com/nutonomy/second.pytorch
 
+https://drive.google.com/file/d/1bDuc4clHaIBmme8iq4oR5uaSqvjS6sBo/view?usp=sharing
+
 ### Install
 
 #### 1. Clone code
