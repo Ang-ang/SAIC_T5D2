@@ -1,9 +1,10 @@
 # SAIC_T5D2
 use pointpillars as baseline, use SAIC dataset to do 3D detection
 
-mainly forked from https://github.com/nutonomy/second.pytorch
+mainly forked from: https://github.com/nutonomy/second.pytorch
 
 Pre_trained model dowload:
+
 [car model](https://drive.google.com/file/d/1bDuc4clHaIBmme8iq4oR5uaSqvjS6sBo/view?usp=sharing)
 
 [pedestrian model](https://drive.google.com/file/d/1grf_VlbgwvflnpfqYuM1wXF_80q8FAUq/view?usp=sharing)
