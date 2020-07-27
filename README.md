@@ -5,9 +5,9 @@ mainly forked from: https://github.com/nutonomy/second.pytorch
 
 Pre_trained model download:
 
-[car model](https://drive.google.com/file/d/1bDuc4clHaIBmme8iq4oR5uaSqvjS6sBo/view?usp=sharing)
+[Model_car](https://drive.google.com/file/d/1bDuc4clHaIBmme8iq4oR5uaSqvjS6sBo/view?usp=sharing)
 
-[pedestrian model](https://drive.google.com/file/d/1grf_VlbgwvflnpfqYuM1wXF_80q8FAUq/view?usp=sharing)
+[Model_pedestrian](https://drive.google.com/file/d/1grf_VlbgwvflnpfqYuM1wXF_80q8FAUq/view?usp=sharing)
 
 ### Install
 
@@ -27,7 +27,7 @@ source activate SAIC
 ```
 #### 3. Setup cuda for numba
 
-You need to add following environment variables for numba to ~/.bashrc:
+Add following environment variables for numba to ~/.bashrc:
 
 ```bash
 export NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
@@ -36,7 +36,7 @@ export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
 ```
 #### 4. PYTHONPATH
 
-Add second.pytorch/ to your PYTHONPATH.
+Add SAIC_T5D2/ to PYTHONPATH.
 
 ### Prepare dataset
 
@@ -90,11 +90,11 @@ eval_input_reader: {
 
 ```bash
 cd ~/second.pytorch/second/pytorch
-python train.py train --config_path=~/configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
+python train.py train --config_path=(path to config file) --model_dir=(path to model dir) --ckpt_path=(path to model)
 ```
 ### Evaluate
 
 ```bash
 cd ~/second.pytorch/second/pytorch
-python train.py evaluate --config_path=~/configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
+python train.py evaluate --config_path=(path to config file) --model_dir=(path to model dir) --ckpt_path=(path to model)
 ```
