@@ -19,6 +19,7 @@ First, use Anaconda to configure as many packages as possible.
 conda create -n SAIC python=3.7 anaconda
 source activate SAIC
 
+```
 
 
 #### 3. Setup cuda for numba
@@ -52,3 +53,49 @@ Download SAIC dataset and create some directories first:
 ```
 
 Note: this repo use ```SAIC_DATASET_ROOT=/data/SAIC_dataset/```.
+
+#### 2. Create infos:
+
+```bash
+python create_data.py create_kitti_info_file --data_path=SAIC_DATASET_ROOT
+```
+#### 3. Create groundtruth-database infos:
+
+```bash
+python create_data.py create_groundtruth_database --data_path=SAIC_DATASET_ROOT
+```
+#### 4. Modify config file
+
+The config file needs to be edited to point to the above datasets:
+
+```bash
+train_input_reader: {
+  ...
+  database_sampler {
+    database_info_path: "/path/to/SAIC_dataset_dbinfos_train.pkl"
+    ...
+  }
+  kitti_info_path: "/path/to/SAIC_dataset_infos_train.pkl"
+  kitti_root_path: "SAIC_DATASET_ROOT"
+}
+...
+eval_input_reader: {
+  ...
+  kitti_info_path: "/path/to/SAIC_dataset_infos_val.pkl"
+  kitti_root_path: "SAIC_DATASET_ROOT"
+}
+```
+### Train
+
+```bash
+cd ~/second.pytorch/second
+python ./pytorch/train.py train --config_path=./configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
+```
+
+### Evaluate
+
+
+```bash
+cd ~/second.pytorch/second/
+python pytorch/train.py evaluate --config_path= configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
+```
