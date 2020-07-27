@@ -20,8 +20,6 @@ conda create -n SAIC python=3.7 anaconda
 source activate SAIC
 
 ```
-
-
 #### 3. Setup cuda for numba
 
 You need to add following environment variables for numba to ~/.bashrc:
@@ -31,7 +29,6 @@ export NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
 export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
 export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
 ```
-
 #### 4. PYTHONPATH
 
 Add second.pytorch/ to your PYTHONPATH.
@@ -51,7 +48,6 @@ Download SAIC dataset and create some directories first:
        └── testing     <-- 1200 test data
            ├── velodyne
 ```
-
 Note: this repo use ```SAIC_DATASET_ROOT=/data/SAIC_dataset/```.
 
 #### 2. Create infos:
@@ -88,14 +84,12 @@ eval_input_reader: {
 ### Train
 
 ```bash
-cd ~/second.pytorch/second
-python ./pytorch/train.py train --config_path=./configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
+cd ~/second.pytorch/second/pytorch
+python train.py train --config_path=~/configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
 ```
-
 ### Evaluate
 
-
 ```bash
-cd ~/second.pytorch/second/
-python pytorch/train.py evaluate --config_path= configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
+cd ~/second.pytorch/second/pytorch
+python train.py evaluate --config_path=~/configs/pointpillars/car/xyres_16.proto --model_dir=/path/to/model_dir
 ```
