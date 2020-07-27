@@ -18,9 +18,7 @@ git clone https://github.com/Ang-ang/SAIC_T5D2.git
 ```
 #### 2. Install Python packages
 
-It is recommend to use the Anaconda package manager.
-
-First, use Anaconda to configure as many packages as possible.
+Use Anaconda to configure as many packages as possible.
 ```bash
 conda create -n SAIC python=3.7 anaconda
 source activate SAIC
