@@ -5,7 +5,8 @@ mainly forked from https://github.com/nutonomy/second.pytorch
 
 Pre_trained model dowload:
 [car model](https://drive.google.com/file/d/1bDuc4clHaIBmme8iq4oR5uaSqvjS6sBo/view?usp=sharing)
-[pedestrian model]()
+
+[pedestrian model](https://drive.google.com/file/d/1grf_VlbgwvflnpfqYuM1wXF_80q8FAUq/view?usp=sharing)
 
 ### Install
 
