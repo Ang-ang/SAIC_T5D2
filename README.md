@@ -18,7 +18,6 @@ First, use Anaconda to configure as many packages as possible.
 ```bash
 conda create -n SAIC python=3.7 anaconda
 source activate SAIC
-
 ```
 #### 3. Setup cuda for numba
 
