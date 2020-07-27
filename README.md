@@ -1,7 +1,7 @@
 # SAIC_T5D2
-use [pointpillars](https://arxiv.org/pdf/1812.05784.pdf) as baseline, use SAIC dataset to do 3D detection
+Use [pointpillars](https://arxiv.org/pdf/1812.05784.pdf) as baseline, use SAIC dataset to do 3D detection
 
-mainly forked from: https://github.com/nutonomy/second.pytorch
+Forked from: https://github.com/nutonomy/second.pytorch
 
 Pre_trained model download:
 
