@@ -90,7 +90,7 @@ eval_input_reader: {
 
 ```bash
 cd ~/second.pytorch/second/pytorch
-python train.py train --config_path=(path to config file) --model_dir=(path to model dir) --ckpt_path=(path to model)
+python train.py train --config_path=(path to config file) --model_dir=(path to model dir)
 ```
 ### Evaluate
 
